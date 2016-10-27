@@ -1,0 +1,32 @@
+subprojects {
+
+    repositories {
+        jcenter()
+    }
+
+    buildscript {
+        repositories {
+            jcenter()
+        }
+        dependencies {
+            classpath 'com.android.tools.build:gradle:2.1.3'
+            classpath 'com.github.dcendents:android-maven-plugin:1.2'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete project.buildDir
+}
+
+ext {
+    minSdkVersion = 9
+    compileSdkVersion = 23
+    targetSdkVersion = compileSdkVersion
+    buildToolsVersion = "23.0.1"
+    versionCode = 4
+    versionName = '1.1.2'
+
+    PUBLISH_GROUP_ID = 'com.anthonycr.grant'
+    PUBLISH_ARTIFACT_ID = 'permissions'
+}
